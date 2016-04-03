@@ -2,7 +2,12 @@ package com.Grove
 
 class Branch {
 
-    String name
+
+    byte[] branchImage
+    String branchTitle
+    String subranchTitle
+    String introduction
+
 
     static constraints = {
 

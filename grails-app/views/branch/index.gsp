@@ -31,8 +31,8 @@
 --%>
 <g:each var="branch" in="${branch}">
     <ul style="list-style-type: none">
-        <li>${branch.picture}</li>
-        <li><h2>${branch.title}</h2></li>
+        <li><img src="${branch.branchImage}"/></li>
+        <li><h2>${branch.branchTitle}</h2></li>
         <li>${branch.introduction}</li>
     </ul>
 </g:each>

@@ -31,7 +31,11 @@
 --%>
 <g:form action="BranCreate">
     <ul style="list-style-type: none">
-        <li>Branch Image</li>
+        <li>
+            <g:uploadForm name="branchImage">
+                <input type="file" name="branchImage"/>
+            </g:uploadForm>
+        </li>
         <li><g:textField name="branchTitle" value="Branch Title"/></li>
         <li><g:textField name="subranchTitle" value="Subranch Title"/></li>
         <li><g:textArea name="introduction" value="Enter the Introduction"/></li>
