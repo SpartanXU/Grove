@@ -16,13 +16,8 @@ class BranchController {
         [branch: branch]
     }
 
-    def BranchCreate() {
-        def branch = new Branch(params)
-        if (branch.save()) {
-            redirect(action: "index")
-        } else {
-            render(view: "input", model: [branch: branch])
-        }
+    def createBranch() {
+
     }
 
 }

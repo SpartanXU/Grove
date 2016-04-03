@@ -29,11 +29,11 @@
 <%--
     Enter branch information
 --%>
-<g:form action="BranchCreate">
+<g:form action="BranCreate">
     <ul style="list-style-type: none">
         <li>Branch Image</li>
         <li><g:textField name="branchTitle" value="Branch Title"/></li>
-        <li><g:textField name="subranchTitle" value="<Subranch Title>"/> </li>
+        <li><g:textField name="subranchTitle" value="Subranch Title"/></li>
         <li><g:textArea name="introduction" value="Enter the Introduction"/></li>
         <li><g:submitButton name="Submit To Ents"/></li>
     </ul>
