@@ -1,5 +1,7 @@
 package com.Grove
 
+import java.lang.reflect.Type
+
 class Branch {
 
 
@@ -10,7 +12,10 @@ class Branch {
 
 
     static constraints = {
+        branchImage maxSize: 10 * 1024 * 1024
+    }
 
+    static mapping = {
 
     }
 }

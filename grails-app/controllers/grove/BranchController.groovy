@@ -7,8 +7,9 @@ import com.Grove.Branch
 class BranchController {
 
     def index() {
-        def branch = Branch.list(sort: "branchTitle")
-        [branch: branch]
+        def var = Branch.get(params.id)
+        [var:var]
+
     }
 
 
@@ -21,14 +22,16 @@ class BranchController {
         def branch = new Branch(params)
 
         if (branch.save()) {
-            redirect(action:"index")
+            redirect(action:"index", params: branch.id)
         } else {
             render(view:"createBranch",model:[branch:branch])
         }
     }
 
-    def branch() {
-        [branch:Branch.get(params.id)]
+
+    def viewBranch() {
+        def branch = Branch.list(sort: "branchTitle")
+        [branch: branch]
     }
 
 }
