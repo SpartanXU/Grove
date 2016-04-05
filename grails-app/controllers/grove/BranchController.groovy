@@ -22,6 +22,7 @@ class BranchController {
 
         if (branch.save()) {
             redirect(action:"index")
+            
         } else {
             render(view:"createBranch",model:[branch:branch])
         }

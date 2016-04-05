@@ -10,7 +10,7 @@ class Branch {
 
 
     static constraints = {
-
+        branchImage(nullable:true, maxSize: 16384 /* 16K */)
 
     }
 }
