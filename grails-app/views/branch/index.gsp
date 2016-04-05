@@ -29,13 +29,17 @@
 <%--
     Branch Introduction
 --%>
-<g:each var="branch" in="${branch}">
-    <ul style="list-style-type: none">
-        <li><img src="${branch.branchImage}"/></li>
-        <li><h2>${branch.branchTitle}</h2></li>
-        <li>${branch.introduction}</li>
-    </ul>
-</g:each>
+    <g:if test="${!var}">
+        <p>Empty var!</p>
+    </g:if>
+    <g:else>
+        <ul style="list-style-type: none">
+            <li>${var.branchTitle}</li>
+            <li>${var.introduction}</li>
+        </ul>
+    </g:else>
+
+
 
 <%--
     Links to create branch or leaf
