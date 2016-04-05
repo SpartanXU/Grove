@@ -12,14 +12,14 @@ class Branch {
 
 
     static constraints = {
-<<<<<<< HEAD
-        branchImage(nullable:true, maxSize: 16384 /* 16K */)
-=======
-        branchImage maxSize: 10 * 1024 * 1024
+
+        branchImage(nullable: false, maxSize: 10 * 1024 * 1024)
+
+
     }
 
     static mapping = {
->>>>>>> e6f4dc2efdffe2b8534817ad16d331022ce792a3
+
 
     }
 }

@@ -22,12 +22,8 @@ class BranchController {
         def branch = new Branch(params)
 
         if (branch.save()) {
-<<<<<<< HEAD
-            redirect(action:"index")
-            
-=======
-            redirect(action:"index", params: branch.id)
->>>>>>> e6f4dc2efdffe2b8534817ad16d331022ce792a3
+            redirect(action:"viewBranch")
+
         } else {
             render(view:"createBranch",model:[branch:branch])
         }
