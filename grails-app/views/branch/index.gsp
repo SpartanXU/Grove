@@ -8,7 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>Create Branch</title>
 </head>
 
 <body>
@@ -34,6 +33,7 @@
     </g:if>
     <g:else>
         <ul style="list-style-type: none">
+            <li><img src="${createLink(controller:'branch', action:'displayImage', params: ['id': var.id])}"/></li>
             <li>${var.branchTitle}</li>
             <li>${var.introduction}</li>
         </ul>

@@ -33,6 +33,8 @@
         </g:each>
 
     </table>
+
 </g:else>
+<g:link action="createBranch">Click here to create a new branch</g:link>
 </body>
 </html>

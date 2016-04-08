@@ -6,6 +6,8 @@ class Branch {
 
 
     byte[] branchImage
+
+
     String branchTitle
     String subranchTitle
     String introduction
@@ -13,7 +15,7 @@ class Branch {
 
     static constraints = {
 
-        branchImage(nullable: false, maxSize: 10 * 1024 * 1024)
+        branchImage(maxSize: 10 * 1024 * 1024)
 
 
     }
