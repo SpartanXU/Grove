@@ -47,11 +47,11 @@
 <ul style="list-style-type: none">
     <li><g:link action="createBranch">Create Branch</g:link></li>
     <li>List of Child Branches</li>
-    <li><g:link action="Create_leaf">Create Leaf</g:link> </li>
+    <li><g:link controller="Leaf" action="createLeaf">Create Leaf</g:link> </li>
 </ul>
 
 <%--
-    Child Leaf of this branch
+    Child Leaf of this branch  -- what is this jingwei???
 --%>
 <g:each var="leaf" in="${leaf}">
     <ul>
