@@ -85,7 +85,7 @@
 <sec:access expression="isAnonymous()">
     <div class="loginForm">
         <g:form action="createUserForm">
-            <h1>The Grove</h1>
+            <h1>Create Your Account</h1>
             <div class="username"><g:textField name="username" value="Username"/></div>
             <div class="password"><g:textField name="password" value="Password"/></div>
             <g:submitButton class="submit" name="Submit"/>
