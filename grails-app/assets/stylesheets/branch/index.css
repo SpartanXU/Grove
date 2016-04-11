@@ -1,0 +1,61 @@
+
+main .branch-header {
+    width: 900px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+}
+
+main .branch-image {
+    height: 200px; width: 200px;
+    padding: 25px;
+    float: left;
+}
+
+main .branch-image img {
+    width: 200px; height: 200px;
+}
+
+main .branch-title {
+    float: left;
+    width: 250px;
+    height: 250px;
+    line-height: 250px;
+    font-size: 30px;
+}
+
+main .branch-intro {
+    height: 250px;
+    float: left;
+    width: 400px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+main .branch-intro span {
+    display: table-cell;
+    height: 200px;
+    vertical-align:middle;
+}
+
+main .branch-links {
+    clear:both;
+    width: 100%; height: 25px;
+}
+
+main .branch-createBranch {
+    width: 15%;
+    float:left;
+    text-align: center;
+}
+
+main .branch-list {
+    width: 70%;
+    float:left;
+    text-align:center;
+}
+
+main .branch-createLeaf {
+    width: 15%;
+    float:left;
+    text-align: center;
+}

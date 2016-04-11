@@ -1,0 +1,76 @@
+
+main {
+    clear: both;
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+main .create-branch h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-align: center;
+
+}
+
+main input[type="file"] {
+    display: none;
+}
+
+main .custom-file-upload {
+    border: 1px solid #ccc;
+    display: block;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 25%; height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 14px;
+}
+
+main .custom-file-upload:hover {
+    background: #f3f3f3;
+}
+
+main .create-titles {
+    padding: 0; margin-top: 10px;
+    display: block;
+    width: 100%;
+}
+
+main .create-titles input {
+    width: 30%;
+    margin: 0px 10%;
+    text-align: center;
+    height: 40px;
+    float: left;
+    font-size: 14px;
+}
+
+main .create-intro {
+    clear: both;
+    width: 100%;
+    height: 200px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+main .create-submit {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+    height: 50px;
+    font-family: Tahoma;
+    background: #fff;
+    margin: 10px auto;
+    display: block;
+    font-size: 14px;
+}
+
+main .create-submit:hover {
+    cursor: pointer;
+    background: #f3f3f3;
+}

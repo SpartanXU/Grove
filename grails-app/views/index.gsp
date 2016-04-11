@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
     <head>
-        <meta name="layout" content="main"/>
         <title>Welcome to The Grove</title>
         <style type="text/css" media="screen">
             #status {

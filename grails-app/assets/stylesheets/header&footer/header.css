@@ -1,0 +1,103 @@
+
+body {
+    background: #59b07f;
+    margin: 0; padding: 0;
+}
+
+.container {
+    width: 1000px; min-height: 100%;
+    background: #fff;
+    margin: 0 auto;
+    border-left: 1px solid #f3f3f3;
+    border-right: 1px solid #f3f3f3;
+    box-sizing: border-box;
+    padding: 0px 20px 10px 20px;
+}
+header {
+    width: 900px;
+    height: 55px;
+    margin: 0 auto;
+    border-bottom: 1px solid #86CCA4;
+    padding-top: 20px;
+}
+
+.header-logo {
+    float:left;
+    width:25%;
+    display: inline-block;
+}
+
+.header-logo i {
+    float: left;
+    color:#1E7D47;
+}
+
+.header-logo h3 {
+    float: left;
+    margin: 7px 0 0 3px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.header-search {
+    float: left;
+    width: 50%;
+}
+
+.header-search .search-field {
+    height: 30px;
+    width: 65%;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid #ccc;
+    padding: 0px 10px;
+    font-size: 13px;
+    float: left;
+    margin: 5px 0 0 10%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.header-search .search-submit {
+    height: 30px;
+    width: 15%;
+    display: inline-block;
+    padding: 0px 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    float: left;
+    border-left: 0;
+    margin-top: 5px;
+    position:relative;
+}
+
+.header-search .search-submit:hover {
+    cursor: pointer;
+    background: #f3f3f3;
+}
+
+.header-account {
+    float: left;
+    width: 25%;
+}
+
+.header-account a, .header-account i {
+    text-align: center;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #333;
+    text-decoration: none;
+    float: right;
+}
+
+.header-account a:hover{
+    text-decoration: underline;
+}
+
+.header-account i {
+    margin-right: 5px;
+}

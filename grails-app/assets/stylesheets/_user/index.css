@@ -1,0 +1,56 @@
+.loginForm {
+    width: 400px;
+    background: #fff;
+    padding: 30px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 200px;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.loginForm h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    margin: 0 0 20px 0;
+}
+
+.username input, .password input {
+    height: 30px;
+    width: 200px;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #bae6cd;
+    border-radius: 4px;
+    color: #444;
+    padding: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+}
+
+.submit {
+    border: 1px solid #bae6cd;
+    background: #fff;
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+.submit:hover {
+    cursor: pointer;
+    background: #f7f7f7;
+}
+
+.loginLink {
+    border: 0;
+    background: none;
+    width: 100%;
+    padding: 10px;
+}
+
+.loginLink:hover{
+    cursor: pointer;
+}
