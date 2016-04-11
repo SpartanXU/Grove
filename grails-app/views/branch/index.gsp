@@ -21,8 +21,8 @@
             </g:if>
             <g:else>
                     <div class="branch-image"><img src="${createLink(controller:'branch', action:'displayImage', params: ['id': var.id])}"/></div>
-                    <div class="branch-title"><${var.branchTitle}></div>
-                    <div class="branch-intro"><span><${var.introduction}></span></div>
+                    <div class="branch-title">${var.branchTitle}</div>
+                    <div class="branch-intro"><span>${var.introduction}</span></div>
             </g:else>
         </div>
 
