@@ -12,6 +12,7 @@ class BranchController {
         def var = Branch.get(params.id)
         [var:var]
 
+
     }
 
     //index page to display branch image

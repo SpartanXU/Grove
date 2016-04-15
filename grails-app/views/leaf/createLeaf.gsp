@@ -27,13 +27,15 @@
 </ul>
 
 <%--
-    Enter branch information
+    Enter leaf information
+    hiddenField to pass the branch ID without display it
 --%>
 <g:uploadForm action="leafCreate">
     <ul style="list-style-type: none">
         <li>
             <input type="file" name="leafImage"/>
         </li>
+        <g:hiddenField name="branch" value="${leaf.id}" />
         <li><g:textField name="leafTitle" value="Leaf Title"/></li>
         <li><g:textField name="leafLink_URL" value="Website URL?"/></li>
         <li><g:textArea name="leafInfo" value="Enter Information"/></li>

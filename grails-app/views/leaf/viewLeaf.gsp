@@ -15,29 +15,10 @@
 </head>
 
 <body>
-<g:if test="${viewLeaf.empty}">
-    <ul>
-        <li>The database is currently empty.</li>
-    </ul>
-</g:if>
-<g:else>
-    <table style="width:100%; border: solid">
-        <tr>
-            <td><strong>Leaf Title</strong></td>
-            <td><strong>Leaf Link</strong></td>
-        </tr>
-        <g:each var="variable" in="${viewLeaf}">
-            <g:form>
-                <tr>
-                    <td>${variable.leafTitle}</td>
-                    <td><g:link action ="index"  id ="${variable.id}">${variable.leafTitle}</g:link> </td>
-                </tr>
-            </g:form>
-        </g:each>
-
-    </table>
-
-</g:else>
+<%-- getAt(0)? to convert  --%>
+You have successfully created a branch.  Visit <g:link action="index" id="${viewLeaf.getAt(0)?.id}">${viewLeaf.getAt(0)?.leafTitle}</g:link>.
+<br/>
+Or go back to the <g:link controller="Trunk" action="index">TRUNK</g:link>
 </body>
 
 </html>

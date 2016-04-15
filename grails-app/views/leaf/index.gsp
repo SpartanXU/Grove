@@ -13,6 +13,9 @@
 
 <body>
 
+<%--
+    Nav bar
+--%>
 <ul style="list-style-type:none">
     <li>Logo</li>
     <li><h3>Leaf Page</h3></li>
@@ -22,6 +25,10 @@
     </g:form>
     <li><g:link action="account">Account</g:link></li>
 </ul>
+
+<%--
+    Display leaf information
+--%>
 
 <g:if test="${!leaf_var}">
     <p>Empty var!</p>
@@ -35,6 +42,9 @@
     </ul>
 </g:else>
 
+<%--
+  Footer
+--%>
 <ul style="list-style-type: none">
     <li><g:link controller="Branch" action="createBranch">Create A New Branch</g:link></li>
     <li>List of Child Branches</li>
