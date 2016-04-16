@@ -15,7 +15,6 @@ class LeafController {
 
     //display leaf image
     def displayImage() {
-        println params
         def file = Leaf.findById(params.id)
         byte[] image = file.leafImage
         response.contentType = 'image/png'
@@ -29,7 +28,7 @@ class LeafController {
         def leaf = new Leaf(params)
         if (leaf.save()) {
             println "Save successfully with ${leaf.leafImage.length} bytes"
-            redirect(action:"viewLeaf")
+            redirect(action:"viewLeaf", params: [id: leaf.id])
         } else {
             println "Save failed"
             leaf.errors.allErrors.each {
@@ -42,7 +41,7 @@ class LeafController {
 
     //display information
     def viewLeaf() {
-        def viewLeaf = Leaf.list(sort: "leafTitle")
+        def viewLeaf = Leaf.get(params.id)
         [viewLeaf: viewLeaf]
     }
 

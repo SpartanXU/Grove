@@ -11,8 +11,6 @@ class BranchController {
     def index() {
         def var = Branch.get(params.id)
         [var:var]
-
-
     }
 
     //index page to display branch image
@@ -38,8 +36,8 @@ class BranchController {
         def branch = new Branch(params)
         if (branch.save()) {
 
-            println "Save successfully with ${branch.branchImage.length} bytes"
-            redirect(action:"viewBranch")
+            println "Save branch image successfully with ${branch.branchImage.length} bytes"
+            redirect(action:"viewBranch", params: [id: branch.id])
 
         } else {
             println "Save failed"
@@ -51,7 +49,7 @@ class BranchController {
     //viewBranch page to display all branch as a list in a table
     //replace this page with future Branch page that contains every branch
     def viewBranch() {
-        def branch = Branch.list(sort: "branchTitle")
+        def branch = Branch.get(params.id)
         [branch: branch]
     }
 

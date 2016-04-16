@@ -31,7 +31,8 @@
 --%>
 
 <g:if test="${!leaf_var}">
-    <p>Empty var!</p>
+    <p>There are currently no leaf under this branch</p>
+    <g:link action="createLeaf">Create A Leaf</g:link>
 </g:if>
 <g:else>
     <ul style="list-style-type: none">
@@ -43,13 +44,10 @@
 </g:else>
 
 <%--
-  Footer
+    Footer
 --%>
-<ul style="list-style-type: none">
-    <li><g:link controller="Branch" action="createBranch">Create A New Branch</g:link></li>
-    <li>List of Child Branches</li>
-    <li><g:link action="createLeaf">Create A Leaf</g:link> </li>
-</ul>
+<p>Copyright &copy; 2016 Michael Ryan Pang, Nicholas Summers, Jingwei Xu. All rights reserved. <br />
+    Created for MI 359: Application Development with Grails, at <a id="foot-link" href="http://msu.edu/" target="_blank">Michigan State University</a>.<br /></p>
 
 </body>
 </html>
