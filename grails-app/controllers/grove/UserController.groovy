@@ -6,6 +6,7 @@ import com.Grove.Role
 import grails.plugin.springsecurity.annotation.Secured
 
 class UserController {
+    def springSecurityService
 
     def index() {}
 
@@ -29,5 +30,12 @@ class UserController {
         def u = User.get(params.ID)
         u.delete()
         redirect(action: "index")
+    }
+
+    def account() {
+        if (!springSecurityService) {
+            println "WTF"
+        }
+            [user:springSecurityService.getCurrentUser()]
     }
 }
