@@ -8,23 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title></title>
+    <meta name="layout" content="main"/>
+    <title>View Leaf</title>
 </head>
 
 <body>
 
-<%--
-    Nav bar
---%>
-<ul style="list-style-type:none">
-    <li>Logo</li>
-    <li><h3>Leaf Page</h3></li>
-    <g:form action="Search">
-        <li><g:submitButton name="Submit"/></li>
-        <li><g:textField name="search" value="Search"/></li>
-    </g:form>
-    <li><g:link action="account">Account</g:link></li>
-</ul>
 
 <%--
     Display leaf information
@@ -42,12 +31,6 @@
         <li>${leaf_var.leafInfo}</li>
     </ul>
 </g:else>
-
-<%--
-    Footer
---%>
-<p>Copyright &copy; 2016 Michael Ryan Pang, Nicholas Summers, Jingwei Xu. All rights reserved. <br />
-    Created for MI 359: Application Development with Grails, at <a id="foot-link" href="http://msu.edu/" target="_blank">Michigan State University</a>.<br /></p>
 
 </body>
 </html>

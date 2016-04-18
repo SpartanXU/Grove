@@ -8,52 +8,56 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title></title>
+    <meta name="layout" content="main"/>
+    <title>Create Leaf - The Grove</title>
 </head>
 
 <body>
 
 <%--
-    Navigation bar
---%>
-<ul style="list-style-type:none">
-    <li>Logo</li>
-    <li><h3>Welcome to the Grove!</h3></li>
-    <g:form action="Search">
-        <li><g:submitButton name="Submit"/></li>
-        <li><g:textField name="search" value="Search"/></li>
-    </g:form>
-    <li><g:link action="account">Account</g:link></li>
-</ul>
-
-<%--
     Enter leaf information
     hiddenField to pass the branch ID without display it
 --%>
-<g:if test="${!leaf}">
-    <p>Leaf can only be created from a branch</p>
-</g:if>
-<g:else>
-    <g:uploadForm action="leafCreate">
-        <ul style="list-style-type: none">
-            <li>
-                <input type="file" name="leafImage"/>
-            </li>
+<div class="create-branch">
+    <g:if test="${!leaf}">
+        <p>Leaf can only be created from a branch</p>
+    </g:if>
+    <g:else>
+        <h1> Create Leaf </h1>
+        <g:uploadForm action="leafCreate">
+            <label id="labelForLeafImage" for="leafImage" class="custom-file-upload">
+                Upload Leaf Image
+            </label>
+            <input id="leafImage" class="create-branch" type="file" name="leafImage" onchange="printFileName(this)"/>
+
             <g:hiddenField name="branch" value="${leaf.id}" />
-            <li><g:textField name="leafTitle" value="Leaf Title"/></li>
-            <li><g:textField name="leafLink_URL" value="Website URL?"/></li>
-            <li><g:textArea name="leafInfo" value="Enter Information"/></li>
-            <li><g:submitButton name="Submit To Branch"/></li>
-        </ul>
-    </g:uploadForm>
-</g:else>
+            <div class="create-titles">
+                <div class="inputHolder">
+                    <label id="labelTitle" for="leafTitle">Leaf Title</label>
+                    <g:textField id="leafTitle" name="leafTitle"/>
+                </div>
+                <div class="inputHolder">
+                    <label for="leafLink_URL">Leaf Link URL</label>
+                    <g:textField id="leafLink_URL" name="leafLink_URL"/>
+                </div>
+            </div>
+            <div id="intro-holder"class="inputHolder">
+                <label for="leafInfo">Enter Leaf Info</label>
+                <g:textArea id="create-intro" name="leafInfo" class="create-intro"/>
+            </div>
+            <g:submitButton class="create-submit" name="Submit To Branch"/>
+        </g:uploadForm>
+    </g:else>
+</div>
 
+<script>
+    function printFileName(input) {
+        var file = input.files[0];
+        var filename = file.name;
+        document.getElementById('labelForLeafImage').innerHTML = filename;
+    }
+</script>
 
-<%--
-    Footer
---%>
-<p>Copyright &copy; 2016 Michael Ryan Pang, Nicholas Summers, Jingwei Xu. All rights reserved. <br />
-    Created for MI 359: Application Development with Grails, at <a id="foot-link" href="http://msu.edu/" target="_blank">Michigan State University</a>.<br /></p>
 
 </body>
 

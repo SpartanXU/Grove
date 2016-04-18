@@ -33,26 +33,22 @@
                 <div class="branch-list">List of Child Branches</div>
                 <div class="branch-createLeaf"><g:link controller="Leaf" action="createLeaf" id="${var.id}">Create Leaf</g:link></div>
             </div>
-        <%--
-            Child Leaf of this branch
-        --%>
-            <div class="leaf-body">
-                <g:if test="${!var.leaf}">
-                    <p>There are currently no leaf for this branch</p>
-                </g:if>
-                <g:else>
-                    <g:each var="leafID" in="${var.leaf}">
-                        <ul>
-                            <li>${leafID.leafTitle}</li>
-                            <li><img src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></li>
-                        </ul>
-                    </g:each>
-                </g:else>
-            </div>
         </g:else>
     </div>
+</div>
 
-
+<div class="branch-body">
+    <g:if test="${!var.leaf}">
+        <p>There are currently no leaf for this branch</p>
+    </g:if>
+    <g:else>
+        <g:each var="leafID" in="${var.leaf}">
+            <div class="leaf-container">
+                <div>${leafID.leafTitle}</div>
+                <div><img src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></div>
+            </div>
+        </g:each>
+    </g:else>
 </div>
 
 
