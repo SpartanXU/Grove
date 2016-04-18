@@ -22,18 +22,18 @@
         <div class="header-logo">
             <i class="fa fa-2x fa-pagelines"></i>
 
-            <h3>The Grove</h3>
+            <h3><g:link controller="trunk">The Grove</g:link></h3>
         </div>
 
         <div class="header-search">
-            <g:form action="Search">
+            <g:form url="[action:'search',controller:'branch']">
                 <g:textField name="search" class="search-field" value="Search"/>
                 <button type="submit" class="search-submit"><i class="fa fa-search fa-lg"></i></button>
             </g:form>
         </div>
 
         <div class="header-account">
-            <g:link action="account">Account</g:link>
+            <g:link controller="Account">Account</g:link>
             <i class="fa fa-user fa-lg"></i>
         </div>
     </header>

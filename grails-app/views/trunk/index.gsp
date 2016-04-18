@@ -8,11 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title></title>
+    <meta name="layout" content="main"/>
+    <title>Trunk - The Grove</title>
 </head>
+<body>
 You in da trunk boi
-
-<g:link controller="branch" action="index">Branch Index Page</g:link>
 <sec:access expression="isAnonymous()">
     <form action='${request.contextPath}/login' method='POST'>
         <g:submitButton name="Submit" value="Login"/>
@@ -27,7 +27,6 @@ You in da trunk boi
         <g:submitButton name="Submit" value="Logout"/>
     </form>
 </sec:access>
-<body>
 
 </body>
 </html>
