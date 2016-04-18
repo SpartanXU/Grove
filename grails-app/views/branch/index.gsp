@@ -38,7 +38,7 @@
 </div>
 
 <div class="branch-body">
-    <g:if test="${!var.leaf}">
+    <g:if test="${!var}">
         <p>There are currently no leaf for this branch</p>
     </g:if>
     <g:else>

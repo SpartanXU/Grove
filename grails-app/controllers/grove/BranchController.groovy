@@ -29,6 +29,14 @@ class BranchController {
         [branch: branch]
     }
 
+    def search() {
+        def c = Branch.createCriteria()
+        def results = c {
+            ilike("branchTitle", "${params.search}%")
+        }
+        [results:results]
+    }
+
     //upload branch information from createBranch page and store it to database
     //if successfully saved, print a message to show the size of branch image
     //if not saved, print failed and back to the createBranch page

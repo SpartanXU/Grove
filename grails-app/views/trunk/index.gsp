@@ -12,6 +12,7 @@
 </head>
 You in da trunk boi
 
+<g:link controller="branch" action="index">Branch Index Page</g:link>
 <sec:access expression="isAnonymous()">
     <form action='${request.contextPath}/login' method='POST'>
         <g:submitButton name="Submit" value="Login"/>
