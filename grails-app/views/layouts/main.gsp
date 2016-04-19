@@ -33,7 +33,7 @@
         </div>
 
         <div class="header-account">
-            <g:link controller="Account">Account</g:link>
+            <g:link action="account" controller="user">Account</g:link>
             <i class="fa fa-user fa-lg"></i>
         </div>
     </header>

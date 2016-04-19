@@ -7,8 +7,9 @@ main .branch-header {
 
 main .branch-image {
     height: 200px; width: 200px;
-    padding: 25px;
+    margin: 25px;
     float: left;
+    background:#81FFB8;
 }
 
 main .branch-image img {
@@ -58,4 +59,37 @@ main .branch-createLeaf {
     width: 15%;
     float:left;
     text-align: center;
+}
+
+main .branch-body {
+    margin-top: 20px;
+}
+
+main .leaf-container {
+    float:left;
+    position:relative;
+    width:33.333333%
+}
+
+main .leaf-title {
+    position: absolute;
+    bottom: 0px;
+    margin: auto;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,.4);
+    line-height: 40px;
+    color: #fff;
+
+}
+
+main .leaf-image{
+    width: 300px;
+    height:300px;
+    background:#7A9F35;
+}
+
+main .leaf-image img {
+    width: 300px; height: 300px;
 }

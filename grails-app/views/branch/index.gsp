@@ -21,7 +21,7 @@
             <div class="branch-createBranch"><g:link action="createBranch">Create Branch</g:link></div>
         </g:if>
         <g:else>
-            <div class="branch-image"><img src="${createLink(controller:'branch', action:'displayImage', params: ['id': var.id])}"/></div>
+            <div class="branch-image"><img onError="this.style.display='none'" src="${createLink(controller:'branch', action:'displayImage', params: ['id': var.id])}"/></div>
 
             <div class="branch-title">${var.branchTitle}</div>
             <div class="branch-intro"><span>${var.introduction}</span></div>
@@ -44,8 +44,8 @@
     <g:else>
         <g:each var="leafID" in="${var.leaf}">
             <div class="leaf-container">
-                <div>${leafID.leafTitle}</div>
-                <div><img src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></div>
+                <div class="leaf-title">${leafID.leafTitle}</div>
+                <div class="leaf-image"><img onError="this.style.display='none'" src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></div>
             </div>
         </g:each>
     </g:else>
