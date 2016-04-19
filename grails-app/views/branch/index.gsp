@@ -45,7 +45,9 @@
         <g:each var="leafID" in="${var.leaf}">
             <div class="leaf-container">
                 <div class="leaf-title">${leafID.leafTitle}</div>
-                <div class="leaf-image"><img onError="this.style.display='none'" src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></div>
+                <g:link controller="leaf" action="index" id="${leafID.id}">
+                    <div class="leaf-image"><img onError="this.style.display='none'" src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></div>
+                </g:link>
             </div>
         </g:each>
     </g:else>

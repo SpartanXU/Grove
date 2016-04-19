@@ -13,7 +13,7 @@
 
 <body>
 <g:each var="r" in="${results}">
-    <div class="branch-title">${r.branchTitle}</div>
+    <g:link action="index" id="${r.id}"><div class="branch-title">${r.branchTitle}</div></g:link>
     <div class="branch-image"><img src="${createLink(controller:'branch', action:'displayImage', params: ['id': r.id])}"/></div>
     <div class="branch-intro"><span>${r.introduction}</span></div>
 </g:each>
