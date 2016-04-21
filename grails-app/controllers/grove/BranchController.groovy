@@ -2,10 +2,13 @@ package grove
 
 
 import com.Grove.Branch
-
+import com.Grove.User
+import grails.plugin.springsecurity.annotation.Secured
 
 
 class BranchController {
+
+    def springSecurityService
 
     //index page to display information of a single branch
     def index() {
@@ -25,8 +28,9 @@ class BranchController {
 
     //call createBranch page
     def createBranch() {
+        User currentUser = springSecurityService.getCurrentUser();
         def branch = Branch.getAll()
-        [branch: branch]
+        [branch: branch, user: currentUser]
     }
 
     def search() {

@@ -19,6 +19,7 @@
     <div class="create-branch">
         <h1> Create Branch </h1>
         <g:uploadForm action="BranCreate">
+            <g:hiddenField name="user" value ="${user.id}" />
             <label id="labelForBranchImage" for="branchImage" class="custom-file-upload">
                 Upload Branch Image
             </label>
@@ -33,7 +34,7 @@
                     <g:textField id="subranchTitle" name="subranchTitle"/>
                 </div>
             </div>
-            <div id="intro-holder"class="inputHolder">
+            <div id="intro-holder" class="inputHolder">
                 <label for="create-intro">Enter Branch Introduction</label>
                 <g:textArea id="create-intro" class="create-intro" name="introduction"/>
             </div>

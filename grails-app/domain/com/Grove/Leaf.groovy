@@ -3,7 +3,7 @@ import com.Grove.Branch
 
 class Leaf {
 
-    static belongsTo = [branch:Branch]
+    static belongsTo = [branch:Branch, user:User]
 
     byte [] leafImage
     String leafTitle

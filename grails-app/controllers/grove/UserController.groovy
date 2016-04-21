@@ -27,15 +27,18 @@ class UserController {
     }
 
     def deleteUser()  {
-        def u = User.get(params.ID)
+        def u = User.get(params.id)
         u.delete()
         redirect(action: "index")
     }
 
     def account() {
         if (!springSecurityService) {
-            println "WTF"
+            println "The spring security service crushed, try to re-run the app or contact developer to fix it."
         }
-            [user:springSecurityService.getCurrentUser()]
+            //get user information using spring security service
+            User currentUser = springSecurityService.getCurrentUser();
+            [user:currentUser]
     }
+
 }

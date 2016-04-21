@@ -2,10 +2,12 @@ package grove
 
 import com.Grove.Leaf
 import com.Grove.Branch
-
-
+import com.Grove.User
+import grails.plugin.springsecurity.annotation.Secured
 
 class LeafController {
+
+    def springSecurityService
 
     //index page to display the current leaf
     def index() {
@@ -26,6 +28,7 @@ class LeafController {
     def leafCreate() {
 
         def leaf = new Leaf(params)
+
         if (leaf.save()) {
             println "Save successfully with ${leaf.leafImage.length} bytes"
             redirect(action:"viewLeaf", params: [id: leaf.id])
@@ -46,8 +49,10 @@ class LeafController {
     }
 
     def createLeaf() {
+        User currentUser = springSecurityService.getCurrentUser();
+
         def leaf = Branch.get(params.id)
-        [leaf: leaf]
+        [leaf: leaf, user:currentUser]
     }
 }
 

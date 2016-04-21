@@ -31,6 +31,7 @@
             <input id="leafImage" class="create-branch" type="file" name="leafImage" onchange="printFileName(this)"/>
 
             <g:hiddenField name="branch" value="${leaf.id}" />
+            <g:hiddenField name="user" value ="${user.id}" />
             <div class="create-titles">
                 <div class="inputHolder">
                     <label id="labelTitle" for="leafTitle">Leaf Title</label>
@@ -41,7 +42,7 @@
                     <g:textField id="leafLink_URL" name="leafLink_URL"/>
                 </div>
             </div>
-            <div id="intro-holder"class="inputHolder">
+            <div id="intro-holder" class="inputHolder">
                 <label for="leafInfo">Enter Leaf Info</label>
                 <g:textArea id="create-intro" name="leafInfo" class="create-intro"/>
             </div>
