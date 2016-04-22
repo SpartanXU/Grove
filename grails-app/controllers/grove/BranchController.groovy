@@ -28,9 +28,9 @@ class BranchController {
 
     //call createBranch page
     def createBranch() {
-        User currentUser = springSecurityService.getCurrentUser();
         def branch = Branch.getAll()
-        [branch: branch, user: currentUser]
+        def user = springSecurityService.currentUser.id
+        [branch: branch, user: user]
     }
 
     def search() {
@@ -46,6 +46,7 @@ class BranchController {
     //if not saved, print failed and back to the createBranch page
     def BranCreate() {
         def branch = new Branch(params)
+
         if (branch.save()) {
 
             println "Save branch image successfully with ${branch.branchImage.length} bytes"
@@ -55,7 +56,6 @@ class BranchController {
             println "Save failed"
             render(view:"createBranch",model:[branch:branch])
         }
-
     }
 
     //viewBranch page to display all branch as a list in a table

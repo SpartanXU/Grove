@@ -49,10 +49,9 @@ class LeafController {
     }
 
     def createLeaf() {
-        User currentUser = springSecurityService.getCurrentUser();
-
         def leaf = Branch.get(params.id)
-        [leaf: leaf, user:currentUser]
+        def user = springSecurityService.currentUser.id
+        [leaf:leaf, user:user]
     }
 }
 
