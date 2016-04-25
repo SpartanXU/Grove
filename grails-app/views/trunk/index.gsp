@@ -13,14 +13,6 @@
 </head>
 <body>
 You in da trunk boi
-<sec:access expression="isAnonymous()">
-    <form action='${request.contextPath}/login' method='POST'>
-        <g:submitButton name="Submit" value="Login"/>
-    </form>
-    <form action='${request.contextPath}/user' method='POST'>
-        <g:submitButton name="Submit" value="Register"/>
-    </form>
-</sec:access>
 
 <sec:access expression="isAuthenticated()">
     <form action='${request.contextPath}/logout' method='POST'>

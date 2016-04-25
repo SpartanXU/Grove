@@ -18,7 +18,9 @@
     <div class="branch-info">
         <g:if test="${!var}">
             <p>There are currently no branch in the database</p>
+            <sec:ifLoggedIn>
             <div class="branch-createBranch"><g:link action="createBranch">Create Branch</g:link></div>
+            </sec:ifLoggedIn>
         </g:if>
         <g:else>
             <div class="branch-image"><img onError="this.style.display='none'" src="${createLink(controller:'branch', action:'displayImage', params: ['id': var.id])}"/></div>
@@ -29,9 +31,11 @@
             Links to create branch or leaf
         --%>
             <div class="branch-links">
+            <sec:ifLoggedIn>
                 <div class="branch-createBranch"><g:link action="createBranch">Create Branch</g:link></div>
                 <div class="branch-list">List of Child Branches</div>
                 <div class="branch-createLeaf"><g:link controller="Leaf" action="createLeaf" id="${var.id}">Create Leaf</g:link></div>
+            </sec:ifLoggedIn>
             </div>
         </g:else>
     </div>

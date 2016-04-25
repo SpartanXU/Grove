@@ -23,13 +23,13 @@ class UserController {
         UserRole.create admin, adminRole
 
 
-        redirect(action: "index")
+        redirect(controller:"login", action: "auth")
     }
 
     def deleteUser()  {
         def u = User.get(params.id)
         u.delete()
-        redirect(action: "index")
+        redirect(controller:"/logout")
     }
 
     def account() {

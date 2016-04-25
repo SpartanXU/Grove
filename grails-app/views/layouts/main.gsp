@@ -33,8 +33,14 @@
         </div>
 
         <div class="header-account">
-            <g:link action="account" controller="user">Account</g:link>
-            <i class="fa fa-user fa-lg"></i>
+            <sec:ifLoggedIn>
+                <g:link action="account" controller="user"><sec:username/></g:link>
+                <i class="fa fa-user fa-lg"></i>
+            </sec:ifLoggedIn>
+            <sec:ifNotLoggedIn>
+                <g:link action="user" controller="index">Account</g:link>
+                <i class="fa fa-user fa-lg"></i>
+            </sec:ifNotLoggedIn>
         </div>
     </header>
 

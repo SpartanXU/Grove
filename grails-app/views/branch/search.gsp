@@ -15,6 +15,7 @@
 <body>
 <h1 class="search-header">Search Results</h1>
 
+<g:if test="${results}">
 <table class="search-results">
     <tr>
         <th>Image</th>
@@ -30,5 +31,9 @@
     </g:each>
 
 </table>
+</g:if>
+<g:else>
+    <h3>No Results Found</h3>
+</g:else>
 </body>
 </html>

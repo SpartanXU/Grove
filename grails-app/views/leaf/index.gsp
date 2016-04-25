@@ -24,7 +24,6 @@
     <g:link action="createLeaf">Create A Leaf</g:link>
 </g:if>
 <g:else>
-
         <div class="branch-image"><img onError="this.style.display='none'" src="${createLink(controller:'Leaf', action:'displayImage', params: ['id': leaf_var.id])}"/></div>
         <h1 class="view-leaf-title"><a href="${leaf_var.leafLink_URL}">${leaf_var.leafTitle}</a></h1>
         <div class="view-leaf-information">${leaf_var.leafInfo}</div>

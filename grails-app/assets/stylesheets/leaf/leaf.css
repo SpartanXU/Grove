@@ -13,3 +13,8 @@
 .view-leaf-title a:hover{
     text-decoration: underline;
 }
+
+.view-leaf-information {
+    text-align: center;
+    font-size: 20px;
+}
