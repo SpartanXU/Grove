@@ -4,7 +4,9 @@
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'com.Grove.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'com.Grove.UserRole'
 grails.plugin.springsecurity.authority.className = 'com.Grove.Role'
-grails.plugin.springsecurity.logout.postOnly = false
+grails.plugin.springsecurity.logout.postOnly = false //allows delete user to also logout
+grails.plugin.springsecurity.successHandler.alwaysUseDefault = true
+grails.plugin.springsecurity.successHandler.defaultTargetUrl = '/trunk/index'
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 	[pattern: '/',               access: ['permitAll']],
 	[pattern: '/error',          access: ['permitAll']],
