@@ -29,7 +29,7 @@ class UserController {
     def deleteUser()  {
         def u = User.get(params.id)
         u.delete()
-        redirect(controller:"/logout")
+        redirect(controller:"logout", action:"index")
     }
 
     def account() {
