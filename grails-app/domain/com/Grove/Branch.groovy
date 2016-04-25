@@ -6,7 +6,8 @@ import java.lang.reflect.Type
 class Branch {
 
     static hasMany = [leaf:Leaf]
-    static belongsTo = [user:User, subbranch:Branch]
+    //static belongsTo = [user:User, subbranch:Branch]
+    static belongsTo = [user:User]
 
 
     byte[] branchImage

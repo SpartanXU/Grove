@@ -31,26 +31,27 @@
                 </div>
                 <div class="inputHolder">
                     Parent Branch Title
-
-                    <g:select name="subbranch" from="${branch.branchTitle}"/>
-                </div>
+        <%--
+                            <g:select name="subbranch" from="${branch.branchTitle}"/>
+        --%>
+                        </div>
+                    </div>
+                    <div id="intro-holder" class="inputHolder">
+                        <label for="create-intro">Enter Branch Introduction</label>
+                        <g:textArea id="create-intro" class="create-intro" name="introduction"/>
+                    </div>
+                    <g:submitButton class="create-submit" name="Submit To Ents"/>
+                </g:uploadForm>
             </div>
-            <div id="intro-holder" class="inputHolder">
-                <label for="create-intro">Enter Branch Introduction</label>
-                <g:textArea id="create-intro" class="create-intro" name="introduction"/>
-            </div>
-            <g:submitButton class="create-submit" name="Submit To Ents"/>
-        </g:uploadForm>
-    </div>
 
 
-<script>
-    function printFileName(input) {
-        var file = input.files[0];
-        var filename = file.name;
-        document.getElementById('labelForBranchImage').innerHTML = filename;
-    }
-</script>
+        <script>
+            function printFileName(input) {
+                var file = input.files[0];
+                var filename = file.name;
+                document.getElementById('labelForBranchImage').innerHTML = filename;
+            }
+        </script>
 
-</body>
-</html>
+        </body>
+        </html>
