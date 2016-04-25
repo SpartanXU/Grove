@@ -10,6 +10,7 @@
     left: 0;
     right: 0;
     text-align: center;
+    border: 1px solid #F38A8A;
 }
 
 .loginForm h1 {
@@ -23,7 +24,7 @@
     width: 200px;
     margin-bottom: 10px;
     background: #fff;
-    border: 1px solid #bae6cd;
+    border: 1px solid #55443D;
     border-radius: 4px;
     color: #444;
     padding: 10px;
@@ -32,16 +33,17 @@
 }
 
 .submit {
-    border: 1px solid #bae6cd;
+    border: 1px solid #55443D;
     background: #fff;
     border-radius: 20px;
     width: 100px;
     height: 30px;
+    transition: all .5s;
 }
 
 .submit:hover {
     cursor: pointer;
-    background: #f7f7f7;
+    background: #F1EDD0;
 }
 
 .loginLink {

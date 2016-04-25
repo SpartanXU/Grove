@@ -27,10 +27,12 @@ main .custom-file-upload {
     text-align: center;
     margin: 0 auto;
     font-size: 14px;
+    transition: all .5s;
 }
 
 main .custom-file-upload:hover {
-    background: #f3f3f3;
+    background: #F1EDD0
+;
 }
 
 main .create-titles {
@@ -91,7 +93,7 @@ main .inputHolder input, main .inputHolder textarea {
 }
 
 main .inputHolder input:focus, main .inputHolder textarea:focus, main #labelForBranchImage:focus {
-    border: 1px solid #1E7D47;
+    border: 1px solid #55443D;
 }
 
 main #intro-holder {
@@ -120,9 +122,10 @@ main .create-submit {
     margin: 10px auto;
     display: block;
     font-size: 14px;
+    transition: all .5s;
 }
 
 main .create-submit:hover {
     cursor: pointer;
-    background: #f3f3f3;
+    background: #F1EDD0;
 }
