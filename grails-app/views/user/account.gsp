@@ -9,22 +9,26 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title></title>
+    <title>User Account - The Grove</title>
 </head>
 
 <body>
 
-<ul>
-    <li>${user.username}</li>
-    <li><g:link action="deleteUser" id="${user.id}">Delete Account</g:link> </li>
-    <g:each var="leafID" in="${user.leaf}">
-        <div class="leaf-container">
-            <div class="leaf-title">${leafID.leafTitle}</div>
-            <g:link controller="leaf" action="index" id="${leafID.id}">
-                <div class="leaf-image"><img onError="this.style.display='none'" src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></div>
-            </g:link>
-        </div>
-    </g:each>
+    <h2 class="account-username">${user.username}</h2>
+    <g:link class="account-delete" action="deleteUser" id="${user.id}">Delete Account</g:link>
+    <h3 class="account-created-header">Leafs</h3>
+    <div class="account-leaves">
+        <g:each var="leafID" in="${user.leaf}">
+            <div class="leaf-container">
+                <div class="leaf-title">${leafID.leafTitle}</div>
+                <g:link controller="leaf" action="index" id="${leafID.id}">
+                    <div class="leaf-image"><img onError="this.style.display='none'" src="${createLink(controller:'leaf', action:'displayImage', params:["id": leafID.id])}"/></div>
+                </g:link>
+            </div>
+        </g:each>
+    </div>
+    <h3 class="account-created-header">Branches</h3>
+    <div class="account-branches">
     <g:each var="BranchID" in="${user.branch}">
         <div class="leaf-container">
             <div class="leaf-title">${BranchID.branchTitle}</div>
@@ -33,6 +37,7 @@
             </g:link>
         </div>
     </g:each>
-</ul>
+    </div>
+
 </body>
 </html>

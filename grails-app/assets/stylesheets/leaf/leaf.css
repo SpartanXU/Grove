@@ -1,0 +1,15 @@
+.view-leaf-title {
+    float: left;
+    width: 650px;
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.view-leaf-title a {
+    color: #333;
+    text-decoration:none;
+}
+
+.view-leaf-title a:hover{
+    text-decoration: underline;
+}

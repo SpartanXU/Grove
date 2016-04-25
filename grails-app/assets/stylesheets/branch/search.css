@@ -1,0 +1,11 @@
+.search-results {
+    text-align:center;
+}
+.search-results th {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.search-results .branch-intro span {
+    width: 400px;
+}

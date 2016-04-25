@@ -23,8 +23,8 @@
     <div class="loginForm">
         <g:form action="createUserForm">
             <h1>Create Your Account</h1>
-            <div class="username"><g:textField name="username" value="Username"/></div>
-            <div class="password"><g:textField name="password" value="Password"/></div>
+            <div class="username"><g:textField name="username" placeholder="Username"/></div>
+            <div class="password"><g:textField name="password" placeholder="Password"/></div>
             <g:submitButton class="submit" name="Submit"/>
         </g:form>
         <form action='${request.contextPath}/login' method='POST'>

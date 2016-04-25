@@ -44,6 +44,14 @@ header {
     font-weight: 100;
 }
 
+.header-logo a {
+    text-decoration: none;
+}
+
+.header-logo a:hover {
+    text-decoration: underline;
+}
+
 .header-search {
     float: left;
     width: 50%;

@@ -15,13 +15,17 @@
 			<form action="${postUrl ?: '/login/authenticate'}" method="POST" autocomplete="off">
 
 				<h1>Login</h1>
-				<div class="username"><input type="text"name="${usernameParameter ?: 'username'}" id="username" value="Username"/></div>
+				<div class="username"><input type="text"name="${usernameParameter ?: 'username'}" id="username" placeholder="Username"/></div>
 
-				<div class="password"><input type="password" name="${passwordParameter ?: 'password'}" id="password" value="Password"/></div>
+				<div class="password"><input type="password" name="${passwordParameter ?: 'password'}" id="password" placeholder="Password"/></div>
 
 				<input type="submit" class="submit" value="${message(code: 'springSecurity.login.button')}"/>
 
 
+			</form>
+
+			<form action='${request.contextPath}/user' method='POST'>
+				<g:submitButton class="loginLink" name="Submit" value="Click here to Register"/>
 			</form>
 		</div>
 

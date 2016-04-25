@@ -27,7 +27,7 @@
 
         <div class="header-search">
             <g:form url="[action:'search',controller:'branch']">
-                <g:textField name="search" class="search-field" value="Search"/>
+                <g:textField name="search" class="search-field" placeholder="Search"/>
                 <button type="submit" class="search-submit"><i class="fa fa-search fa-lg"></i></button>
             </g:form>
         </div>

@@ -10,6 +10,8 @@
 *= require header&footer/header
 *= require branch/createBranch
 *= require branch/index
+*= require branch/search
+*= require leaf/leaf
 *= require _user/index
 *= require header&footer/footer
 *= require main

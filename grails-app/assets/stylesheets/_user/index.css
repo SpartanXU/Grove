@@ -54,3 +54,33 @@
 .loginLink:hover{
     cursor: pointer;
 }
+
+
+
+.account-username {
+    text-align:center;
+}
+
+.account-delete {
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #D56C95;
+    border-radius: 15px;
+    color: #333;
+    text-decoration: none;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.account-delete:hover{
+    background:#F3C4D6;
+}
+
+.account-leaves, .account-branches {
+    overflow:hidden;
+
+}

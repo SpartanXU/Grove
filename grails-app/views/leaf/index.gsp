@@ -9,7 +9,7 @@
 <html>
 <head>
     <meta name="layout" content="main"/>
-    <title>View Leaf</title>
+    <title>View Leaf - The Grove</title>
 </head>
 
 <body>
@@ -24,12 +24,10 @@
     <g:link action="createLeaf">Create A Leaf</g:link>
 </g:if>
 <g:else>
-    <ul style="list-style-type: none">
-        <li><img src="${createLink(controller:'Leaf', action:'displayImage', params: ['id': leaf_var.id])}"/></li>
-        <li>${leaf_var.leafTitle}</li>
-        <li>${leaf_var.leafLink_URL}</li>
-        <li>${leaf_var.leafInfo}</li>
-    </ul>
+
+        <div class="branch-image"><img onError="this.style.display='none'" src="${createLink(controller:'Leaf', action:'displayImage', params: ['id': leaf_var.id])}"/></div>
+        <h1 class="view-leaf-title"><a href="${leaf_var.leafLink_URL}">${leaf_var.leafTitle}</a></h1>
+        <div class="view-leaf-information">${leaf_var.leafInfo}</div>
 </g:else>
 
 </body>
