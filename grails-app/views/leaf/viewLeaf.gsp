@@ -21,7 +21,7 @@
     <p>Not enough information to proceed</p>
 </g:if>
 <g:else>
-You have successfully created a branch.  Visit <g:link action="index" id="${viewLeaf.id}">${viewLeaf.leafTitle}</g:link>.
+You have successfully created a leaf.  Visit <g:link action="index" id="${viewLeaf.id}">${viewLeaf.leafTitle}</g:link>.
 <br/>
 Or go back to the <g:link controller="Trunk" action="index">TRUNK</g:link>
 </g:else>
