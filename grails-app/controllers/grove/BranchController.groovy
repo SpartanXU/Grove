@@ -10,6 +10,7 @@ class BranchController {
 
     def springSecurityService
 
+
     //index page to display information of a single branch
     def index() {
         def var = Branch.get(params.id)
@@ -45,7 +46,15 @@ class BranchController {
     //if successfully saved, print a message to show the size of branch image
     //if not saved, print failed and back to the createBranch page
     def BranCreate() {
-        def branch = new Branch(params)
+        def branch = new Branch(branchTitle:params.branchTitle, introduction: params.introduction, branchImage:params.branchImage, user: params.user)
+        if (params.parentbranch) {
+            def parbranch = Branch.findByBranchTitle(params.parentbranch)
+            def parentbranch = Branch.get(parbranch.id)
+            parentbranch.childbranchid = branch.id
+            parentbranch.save()
+            println"${parentbranch.branchTitle} now has a new child branch ID: ${parentbranch.childbranchid}"
+
+        }
 
         if (branch.save()) {
 

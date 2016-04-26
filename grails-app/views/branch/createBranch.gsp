@@ -31,7 +31,7 @@
                 </div>
                 <div class="inputHolder">
                     Parent Branch Title
-                    <g:select name="subbranch" from="${branch.branchTitle}"/>
+                    <g:select name="parentbranch" from="${branch.branchTitle}"/>
                         </div>
                     </div>
                     <div id="intro-holder" class="inputHolder">
