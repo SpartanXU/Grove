@@ -47,18 +47,16 @@ class BranchController {
     //if not saved, print failed and back to the createBranch page
     def BranCreate() {
         def branch = new Branch(branchTitle:params.branchTitle, introduction: params.introduction, branchImage:params.branchImage, user: params.user)
-        if (params.parentbranch) {
-            def parbranch = Branch.findByBranchTitle(params.parentbranch)
-            def parentbranch = Branch.get(parbranch.id)
-            parentbranch.childbranchid = branch.id
-            parentbranch.save()
-            println"${parentbranch.branchTitle} now has a new child branch ID: ${parentbranch.childbranchid}"
 
-        }
 
         if (branch.save()) {
 
             println "Save branch image successfully with ${branch.branchImage.length} bytes"
+            if (params.parentbranch) {
+                def parbranch = Branch.findByBranchTitle(params.parentbranch)
+                parbranch.childbranchid.add(branch.id)
+                println"${parbranch.branchTitle} now has the following child branches with ID: ${parbranch.childbranchid}"
+            }
             redirect(action:"viewBranch", params: [id: branch.id])
 
         } else {
