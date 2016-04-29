@@ -27,13 +27,14 @@
 
             <div class="branch-title">${var.branchTitle}</div>
             <div class="branch-intro"><span>${var.introduction}</span></div>
+            <div class="related-branches"></div>
         <%--
             Links to create branch or leaf
         --%>
             <div class="branch-links">
             <sec:ifLoggedIn>
                 <div class="branch-createBranch"><g:link action="createBranch">Create Branch</g:link></div>
-                <div class="branch-list">List of Child Branches</div>
+                <div class="branch-list"><g:link action="listBranches">Related Branches</g:link></div>
                 <div class="branch-createLeaf"><g:link controller="Leaf" action="createLeaf" id="${var.id}">Create Leaf</g:link></div>
             </sec:ifLoggedIn>
             </div>

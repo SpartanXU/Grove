@@ -14,6 +14,14 @@
 
 <body>
 
+<g:hasErrors bean="${leaf}">
+    <ul>
+        <g:eachError var="err" bean="${leaf}">
+            <li>${err}</li>
+        </g:eachError>
+    </ul>
+</g:hasErrors>
+
 <%--
     Enter leaf information
     hiddenField to pass the branch ID without display it

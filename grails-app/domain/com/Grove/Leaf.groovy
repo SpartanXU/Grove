@@ -15,6 +15,7 @@ class Leaf {
     static constraints = {
         leafImage(maxSize: 10 * 1024 * 1024)
         branch nullable: true
+        leafTitle nullable: false
     }
 
 

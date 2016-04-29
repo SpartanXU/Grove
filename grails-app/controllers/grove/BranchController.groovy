@@ -34,6 +34,15 @@ class BranchController {
         [branch: branch, user: user]
     }
 
+    def listBranches() {
+        def branch = Branch.getAll()
+        def parbranch = Branch.findByBranchTitle(params.parentbranch)
+        parbranch
+
+        [branch: branch]
+
+    }
+
     def search() {
         def c = Branch.createCriteria()
         def results = c {

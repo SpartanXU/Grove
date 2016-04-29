@@ -13,6 +13,14 @@
 </head>
 
 <body>
+    <g:hasErrors bean="${branch}">
+        <ul>
+            <g:eachError var="err" bean="${branch}">
+                <li>${err}</li>
+            </g:eachError>
+        </ul>
+    </g:hasErrors>
+
     <%--
     Enter branch information
     --%>
@@ -27,11 +35,11 @@
             <div class="create-titles">
                 <div class="inputHolder">
                     <label id="labelTitle" for="branchTitle">Branch Title</label>
-                    <g:textField id="branchTitle" name="branchTitle"/>
+                    <g:textField id="branchTitle" name="branchTitle" />
                 </div>
                 <div class="inputHolder">
                     Parent Branch Title
-                    <g:select name="parentbranch" from="${branch.branchTitle}"/>
+                    <g:select name="parentbranch" in="${branch.id}" from="${branch.branchTitle}" noSelection="['':'New Branch']"/>
                         </div>
                     </div>
                     <div id="intro-holder" class="inputHolder">

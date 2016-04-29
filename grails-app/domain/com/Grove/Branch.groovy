@@ -19,6 +19,8 @@ class Branch {
     static constraints = {
         branchImage(maxSize: 10 * 1024 * 1024)
         childbranchid nullable: true
+        branchTitle nullable: false, blank: false
+        branchImage nullable: false
     }
 
     static mapping = {
