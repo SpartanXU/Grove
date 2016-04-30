@@ -90,6 +90,7 @@ main .inputHolder input, main .inputHolder textarea {
     -ms-transition: border-color .5s ease;
     -o-transition: border-color .5s ease;
     transition: border-color .5s ease;
+    z-index: 1;
 }
 
 main .inputHolder input:focus, main .inputHolder textarea:focus, main #labelForBranchImage:focus {
@@ -100,6 +101,30 @@ main #intro-holder {
     width: 100%;
     padding: 0;
 
+}
+
+main select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    text-align: center;
+    padding: 0 10px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Ic_arrow_drop_down_48px.svg/1024px-Ic_arrow_drop_down_48px.svg.png) 96% / 15% no-repeat #fff;
+}
+
+main select::-ms-expand { /* for IE 11 */
+    display: none;
+    width: 300px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    text-align: center;
+    padding: 0 10px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Ic_arrow_drop_down_48px.svg/1024px-Ic_arrow_drop_down_48px.svg.png) 96% / 15% no-repeat #fff;
 }
 
 main #create-intro {

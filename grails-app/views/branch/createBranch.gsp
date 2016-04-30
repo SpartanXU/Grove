@@ -38,7 +38,7 @@
                     <g:textField id="branchTitle" name="branchTitle" />
                 </div>
                 <div class="inputHolder">
-                    Parent Branch Title
+                    <label id="labelTitle" for="parentbranch">Parent Branch Title</label>
                     <g:select name="parentbranch" in="${branch.id}" from="${branch.branchTitle}" noSelection="['':'New Branch']"/>
                         </div>
                     </div>
