@@ -7,19 +7,18 @@ footer {
     font-size:12px;
 }
 
-
-
-
-
 .footer-text {
     background: #55443D;
-    padding: 20px;
+    padding: 10px;
     font-size: 14px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
 }
 
 
 .footer-text p {
     margin: 0;
+    font-size: 12px;
 }
 
 footer a {

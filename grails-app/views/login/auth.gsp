@@ -19,7 +19,7 @@
 
 				<div class="password"><input type="password" name="${passwordParameter ?: 'password'}" id="password" placeholder="Password"/></div>
 
-				<input type="submit" class="submit" value="${message(code: 'springSecurity.login.button')}"/>
+				<input type="submit" class="submit" value="Submit"/>
 
 
 			</form>
