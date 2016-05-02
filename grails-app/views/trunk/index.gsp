@@ -14,6 +14,7 @@
 <body>
 You in da trunk boi
 <g:link action="index" controller="branch">Branch Page</g:link>
+
 <sec:access expression="isAuthenticated()">
     <form action='${request.contextPath}/logout' method='POST'>
         <g:submitButton name="Submit" value="Logout"/>
