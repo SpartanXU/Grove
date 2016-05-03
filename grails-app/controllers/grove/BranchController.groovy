@@ -34,6 +34,7 @@ class BranchController {
         [branch: branch, user: user]
     }
 
+    //lists related branches
     def listBranches() {
         def branch = Branch.getAll()
         def parbranch = Branch.findByBranchTitle(params.parentbranch)
@@ -43,6 +44,7 @@ class BranchController {
 
     }
 
+    //searches branches by name, not case sensitive
     def search() {
         def c = Branch.createCriteria()
         def results = c {

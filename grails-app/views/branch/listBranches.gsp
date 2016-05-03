@@ -13,6 +13,8 @@
 </head>
 
 <body>
+
+<%-- lists related branches according to parentbranch --%>
 <g:each in="${branch}">
     <li><g:link action="index" id="${it.id}">${it.branchTitle}</g:link></li>
 </g:each>

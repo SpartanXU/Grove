@@ -50,7 +50,7 @@
                 </g:uploadForm>
             </div>
 
-
+        <%-- prints file name upon input --%>
         <script>
             function printFileName(input) {
                 var file = input.files[0];

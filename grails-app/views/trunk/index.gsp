@@ -12,12 +12,14 @@
     <title>Trunk - The Grove</title>
 </head>
 <body>
+
+<%-- displays Top 15 Branches that have the most Leafs posted inside of them --%>
+
 <g:link action="index" controller="branch">Branch Page</g:link>
 <g:if test ="${branchNew}">
     <g:each var = "var" in = "${branchNew}">
-        <ul>
-            <li>${var.branchTitle}</li>
-        </ul>
+            <div class="branch-image"><img onError="this.style.display='none'" src="${createLink(controller:'branch', action:'displayImage', params: ['id': var.id])}"/></div>
+            <g:link action="index" id="var.id"><div class="branch-title">${var.branchTitle}</div></g:link>
     </g:each>
 </g:if>
 

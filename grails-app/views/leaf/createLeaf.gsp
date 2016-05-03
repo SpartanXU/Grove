@@ -60,6 +60,8 @@
     </g:else>
 </div>
 
+<%--displays file name upon succesfull input--%>
+
 <script>
     function printFileName(input) {
         var file = input.files[0];

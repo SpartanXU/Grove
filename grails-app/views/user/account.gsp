@@ -14,6 +14,14 @@
 
 <body>
 
+<%-- admin can see users that have created accounts --%>
+
+<sec:access expression="hasRole('ROLE_ADMIN')">
+    <g:link action="userModeration">See Website Users</g:link>
+</sec:access>
+
+<%-- displays user created branches, leafs, and have the ability to delete account --%>
+
     <h2 class="account-username">${user.username}</h2>
     <g:link class="account-delete" action="deleteUser" id="${user.id}">Delete Account</g:link>
     <h3 class="account-created-header">Leafs</h3>

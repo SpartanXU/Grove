@@ -55,6 +55,7 @@ class LeafController {
         [viewLeaf: viewLeaf]
     }
 
+    //creates a leaf and saves leaf to a certain user id
     def createLeaf() {
         def leaf = Branch.get(params.id)
         def user = springSecurityService.currentUser.id

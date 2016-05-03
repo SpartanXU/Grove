@@ -9,7 +9,8 @@ import java.lang.reflect.Type
 
 class Branch {
 
-    static hasMany = [leaf:Leaf, childbranchid: Long]
+    static hasMany = [leaf:Leaf, childbranchid: Long]   //branches have many-to-one relationship with leafs
+                                                        //branches can have many childbranches too
     static belongsTo = [user:User]
 
     byte[] branchImage

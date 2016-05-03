@@ -4,8 +4,6 @@
   Date: 4/9/2016
   Time: 4:36 PM
 
-  Nick -- this page is the page that will essentially be all the leafs under the parent branch, just gotta figure out how
-  relate those together
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
