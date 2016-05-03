@@ -9,18 +9,20 @@ import java.lang.reflect.Type
 
 class Branch {
 
-    static hasMany = [leaf:Leaf, childbranchid: Long ]
+    static hasMany = [leaf:Leaf, childbranchid: Long]
     static belongsTo = [user:User]
 
     byte[] branchImage
     String branchTitle
     String introduction
+    Long countLeaf
 
     static constraints = {
         branchImage(maxSize: 10 * 1024 * 1024)
         childbranchid nullable: true
         branchTitle nullable: false, blank: false
         branchImage nullable: false
+
     }
 
     static mapping = {

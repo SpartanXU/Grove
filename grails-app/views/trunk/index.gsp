@@ -12,8 +12,14 @@
     <title>Trunk - The Grove</title>
 </head>
 <body>
-You in da trunk boi
 <g:link action="index" controller="branch">Branch Page</g:link>
+<g:if test ="${branchNew}">
+    <g:each var = "var" in = "${branchNew}">
+        <ul>
+            <li>${var.branchTitle}</li>
+        </ul>
+    </g:each>
+</g:if>
 
 <sec:access expression="isAuthenticated()">
     <form action='${request.contextPath}/logout' method='POST'>

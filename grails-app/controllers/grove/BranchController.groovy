@@ -55,7 +55,7 @@ class BranchController {
     //if successfully saved, print a message to show the size of branch image
     //if not saved, print failed and back to the createBranch page
     def BranCreate() {
-        def branch = new Branch(branchTitle:params.branchTitle, introduction: params.introduction, branchImage:params.branchImage, user: params.user)
+        def branch = new Branch(branchTitle:params.branchTitle, introduction: params.introduction, branchImage:params.branchImage, user: params.user, countLeaf: 0)
 
 
         if (branch.save()) {

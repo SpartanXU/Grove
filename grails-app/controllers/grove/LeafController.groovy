@@ -27,11 +27,17 @@ class LeafController {
     //save leaf
     def leafCreate() {
 
-        def leaf = new Leaf(params)
+        def leaf = new Leaf(leafTitle:params.leafTitle,leafLink_URL:params.leafLink_URL,leafInfo:params.leafInfo,leafImage:params.leafImage, branch:params.branch, user:params.user)
 
         if (leaf.save()) {
+
+            def branch = Branch.get(params.branch)
+            branch.countLeaf = branch.countLeaf + 1
+            branch.save()
+            println"The branch now has ${branch.countLeaf} leafs"
             println "Save successfully with ${leaf.leafImage.length} bytes"
             redirect(action:"viewLeaf", params: [id: leaf.id])
+
         } else {
             println "Save failed"
             leaf.errors.allErrors.each {
@@ -39,6 +45,7 @@ class LeafController {
             }
             render(view:"createLeaf",model:[leaf:leaf])
         }
+
 
     }
 

@@ -40,6 +40,7 @@
 
             <g:hiddenField name="branch" value="${leaf.id}" />
             <g:hiddenField name="user" value ="${user}" />
+            <g:hiddenField name="branchTitle" value="${leaf.branchTitle}" />
             <div class="create-titles">
                 <div class="inputHolder">
                     <label id="labelTitle" for="leafTitle">Leaf Title</label>
