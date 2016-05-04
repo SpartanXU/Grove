@@ -13,10 +13,12 @@
 *= require branch/search
 *= require leaf/leaf
 *= require _user/index
+*= require trunk/index
 *= require header&footer/footer
 *= require main
 *= require mobile
 *= require_self
+*= require jqcloud.css
 */
 
 

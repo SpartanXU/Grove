@@ -1,0 +1,26 @@
+.trunk-notification {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 185px;
+    width: 300px;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(140,214,112,.3);
+}
+
+.trunk-notification h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 42px;
+}
+
+.trunk-notification p {
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+}
+
+.trunk-notification a {
+    color: rgb(165, 42, 42);
+}

@@ -36,7 +36,7 @@ class LeafController {
             branch.save()
             println"The branch now has ${branch.countLeaf} leafs"
             println "Save successfully with ${leaf.leafImage.length} bytes"
-            redirect(action:"viewLeaf", params: [id: leaf.id])
+            redirect(action:"index", params: [id: leaf.id])
 
         } else {
             println "Save failed"

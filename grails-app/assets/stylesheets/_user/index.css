@@ -62,21 +62,26 @@
 
 .account-username {
     text-align:center;
+    font-size: 32px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .account-delete {
     display: block;
-    width: 200px;
-    height: 40px;
-    margin: 0 auto;
+    width: 150px;
+    height: 30px;
+    margin: 20px 0;
     text-align: center;
-    line-height: 40px;
+    line-height: 30px;
     border: 1px solid #D56C95;
     border-radius: 15px;
     color: #333;
     text-decoration: none;
     background: #fff;
     margin-bottom: 20px;
+    font-family: merriweather;
+    font-weight: 100;
+    font-size: 12px;
 }
 
 .account-delete:hover{
@@ -86,4 +91,41 @@
 .account-leaves, .account-branches {
     overflow:hidden;
 
+}
+
+.account-created-header {
+    font-family: 'Raleway', sans-serif;
+}
+
+.account-created-header-fail {
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+}
+
+.account-link {
+    color: rgb(165, 42, 42);
+}
+
+table {
+    width: 50%;
+    border: none;
+    margin: 0 auto;
+}
+
+table th {
+    border: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+
+}
+
+table td {
+    border: none;
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+    text-align: center;
+}
+
+table td form {
+    text-align: center;
 }

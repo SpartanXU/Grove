@@ -24,7 +24,7 @@
     </tr>
     <g:each var="r" in="${results}">
         <tr>
-        <td><div class="branch-image"><img src="${createLink(controller:'branch', action:'displayImage', params: ['id': r.id])}"/></div></td>
+        <td><div class="branch-image"><img onError="this.style.display='none'" src="${createLink(controller:'branch', action:'displayImage', params: ['id': r.id])}"/></div></td>
         <td><g:link action="index" id="${r.id}"><div class="branch-title">${r.branchTitle}</div></g:link></td>
         <td><div class="branch-intro"><span>${r.introduction}</span></div></td>
         </tr>
@@ -33,7 +33,7 @@
 </table>
 </g:if>
 <g:else>
-    <h3>No Results Found</h3>
+    <h3 class="search-fail">No Results Found</h3>
 </g:else>
 </body>
 </html>

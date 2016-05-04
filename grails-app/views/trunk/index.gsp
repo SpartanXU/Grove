@@ -12,22 +12,50 @@
     <title>Trunk - The Grove</title>
 </head>
 <body>
+<script>
+    var words = [];
+</script>
+
+<g:if test="${branchNew.isEmpty()}">
+    <div class="trunk-notification">
+        <h1>Oh No!</h1>
+        <p> There are no branches created</p>
+        <p> Why not create one <g:link controller="branch" action="createBranch">here</g:link>?</p>
+        <sec:ifNotLoggedIn>
+            <p>You can create an account <g:link controller="user" action="index">here</g:link> to get started!</p>
+        </sec:ifNotLoggedIn>
+    </div>
+</g:if>
+<g:else>
+    <sec:ifNotLoggedIn>
+        <div class="trunk-top-notification">
+            <p>Looks like you're not logged in. Click here to login/create an account to create branches and leaves of your own!</p>
+        </div>
+    </sec:ifNotLoggedIn>
+</g:else>
 
 <%-- displays Top 15 Branches that have the most Leafs posted inside of them --%>
 
-<g:link action="index" controller="branch">Branch Page</g:link>
 <g:if test ="${branchNew}">
-    <g:each var = "var" in = "${branchNew}">
-            <div class="branch-image"><img onError="this.style.display='none'" src="${createLink(controller:'branch', action:'displayImage', params: ['id': var.id])}"/></div>
-            <g:link action="index" id="var.id"><div class="branch-title">${var.branchTitle}</div></g:link>
-    </g:each>
+    <div id="branchTitles">
+        <g:each var = "var" in = "${branchNew}">
+            <script>
+                words.push({text: '${var.branchTitle}',
+                    weight: Math.floor(Math.random() * (60 - 30 + 1)) + 30,
+                    link: "/branch/index/${var.id}"
+                });
+            </script>
+        </g:each>
+    </div>
 </g:if>
 
-<sec:access expression="isAuthenticated()">
-    <form action='${request.contextPath}/logout' method='POST'>
-        <g:submitButton name="Submit" value="Logout"/>
-    </form>
-</sec:access>
+<script>
+    console.log(words);
+    $('#branchTitles').jQCloud(words, {
+        width: 900,
+        height: 400
+    });
+</script>
 
 </body>
 </html>

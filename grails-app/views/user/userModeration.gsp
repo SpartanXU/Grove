@@ -13,22 +13,23 @@
 </head>
 
 <body>
-<table border="1" style="width:100%">
+<table>
     <thead>
     <tr>
         <th>Username</th>
-        <th>Delete Account?</th>
+        <th>Actions</th>
     </tr>
     </thead>
-
 <!-- displays all users and allows admin to delete accounts -->
     <g:each var="User" in="${users}">
         <tbody>
-                <td>${User.username}</td>
+        <td>${User.username}</td>
         <td><form action="deleteUser">
             <g:hiddenField name="ID" value="${User.id}"></g:hiddenField>
             <g:submitButton name="Submit" value="Delete"/>
         </form></td>
+        </tbody>
     </g:each>
+</table>
 </body>
 </html>

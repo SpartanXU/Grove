@@ -6,26 +6,27 @@ main .branch-header {
 }
 
 main .branch-image {
-    height: 200px; width: 200px;
+    height: 150px; width: 150px;
     margin: 25px;
     float: left;
     background:#7A9F35;
 }
 
 main .branch-image img {
-    width: 200px; height: 200px;
+    width: 150px; height: 150px;
 }
 
 main .branch-title {
     float: left;
     width: 250px;
-    height: 250px;
-    line-height: 250px;
+    height: 200px;
+    line-height: 200px;
     font-size: 30px;
+    color: brown;
 }
 
 main .branch-intro {
-    height: 250px;
+    height: 200px;
     float: left;
     width: 400px;
     padding: 25px;
@@ -34,13 +35,24 @@ main .branch-intro {
 
 main .branch-intro span {
     display: table-cell;
-    height: 200px;
+    height: 150px;
     vertical-align:middle;
 }
 
 main .branch-links {
     clear:both;
     width: 100%; height: 25px;
+}
+
+main .branch-links a {
+    font-family: merriweather;
+    font-weight: 100;
+    text-decoration: none;
+    color: #000;
+}
+
+main .branch-links a:hover {
+    text-decoration: underline;
 }
 
 main .branch-createBranch {
@@ -55,6 +67,42 @@ main .branch-list {
     text-align:center;
 }
 
+main .relatedBranch-header {
+    font-family: 'Raleway', sans-serif;
+    border-bottom: 1px solid #000;
+    width: 270px;
+}
+
+main .relatedBranch-para {
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+}
+
+main .relatedBranch-list {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+}
+
+main .relatedBranch-list li {
+    padding: 10px 0 0 0;
+}
+
+main .relatedBranch-list li:first-child {
+    padding: 0 0 0 0;
+}
+
+main .relatedBranch-list a{
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+    color: brown;
+    text-decoration: none;
+}
+
+main .relatedBranch-list a:hover {
+    text-decoration: underline;
+}
+
 main .branch-createLeaf {
     width: 15%;
     float:left;
@@ -63,6 +111,7 @@ main .branch-createLeaf {
 
 main .branch-body {
     margin-top: 20px;
+    overflow: hidden;
 }
 
 main .leaf-container {

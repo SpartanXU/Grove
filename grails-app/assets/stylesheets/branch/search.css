@@ -1,6 +1,16 @@
+.search-header {
+    font-family: 'Raleway', sans-serif
+}
+
+.search-fail {
+    font-family: 'Merriweather', serif;
+    font-weight: 100;
+}
+
 .search-results {
     text-align:center;
 }
+
 .search-results th {
     padding-bottom: 15px;
     border-bottom: 1px solid #e5e5e5;

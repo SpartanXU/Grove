@@ -15,8 +15,16 @@
 <body>
 
 <%-- lists related branches according to parentbranch --%>
-<g:each in="${branch}">
-    <li><g:link action="index" id="${it.id}">${it.branchTitle}</g:link></li>
-</g:each>
+<h1 class="relatedBranch-header">Related Branches</h1>
+<g:if test="${branch.isEmpty()}">
+    <p class="relatedBranch-para">No related branches found. Try making one!</p>
+</g:if>
+<g:else>
+    <ul class="relatedBranch-list">
+    <g:each in="${branch}">
+        <li><g:link action="index" id="${it.id}">${it.branchTitle}</g:link></li>
+    </g:each>
+    </ul>
+</g:else>
 </body>
 </html>

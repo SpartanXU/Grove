@@ -12,12 +12,19 @@ body {
 .container {
     width: 1000px; min-height: 100%;
     background: #fff;
-    margin: 0 auto;
+    margin: 0 auto -85px auto;
     border-left: 1px solid #55443D;
     border-right: 1px solid #55443D;
     box-sizing: border-box;
     padding: 0px 20px 60px 20px;
 }
+
+.container:after {
+    content: "";
+    display: block;
+    height: 85px;
+}
+
 header {
     width: 900px;
     height: 55px;
@@ -97,7 +104,7 @@ header {
     width: 25%;
 }
 
-.header-account a, .header-account i {
+.header-account .header-menu, .header-account i {
     text-align: center;
     display: block;
     height: 40px;
@@ -117,4 +124,88 @@ header {
 
 .header-account i {
     margin-right: 5px;
+}
+
+.header-account .header-menu {
+    position: relative;
+    height: 140px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.header-account .header-menu ul {
+    padding: 0;
+    position: absolute;
+    top: 26px;
+    left: -61px;
+    width: 120px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transiton: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    -transition: opacity 0.2s;
+}
+
+.header-account .header-menu:hover ul {
+    display: block;
+    opacity: 100;
+    visibility: visible;
+    cursor: pointer;
+}
+
+.header-account .header-menu ul li {
+    background: #555;
+    display: block;
+    color: #fff;
+    text-shadow: 0 -1px 0 #000;
+    height: 30px;
+    line-height: 30px;
+    width: 120px;
+}
+
+.header-account .header-menu ul li a {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header-account .header-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.header-account .header-menu input {
+    background: 0;
+    border: 0;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    text-decoration:none;
+    font-size: 12px;
+}
+
+.header-account .header-menu input:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ul-triangle {
+    display: none;
+    position: absolute;
+    right: 18px;
+    top: 32px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #555;
+}
+
+.header-account .header-menu:hover .ul-triangle {
+    display: block;
 }

@@ -13,18 +13,28 @@
 </head>
 
 <body>
-
-<%-- admin can see users that have created accounts --%>
-
-<sec:access expression="hasRole('ROLE_ADMIN')">
-    <g:link action="userModeration">See Website Users</g:link>
-</sec:access>
-
 <%-- displays user created branches, leafs, and have the ability to delete account --%>
 
-    <h2 class="account-username">${user.username}</h2>
-    <g:link class="account-delete" action="deleteUser" id="${user.id}">Delete Account</g:link>
-    <h3 class="account-created-header">Leafs</h3>
+    <h1 class="account-username">${user.username}</h1>
+
+    <h2 class="account-created-header">Branches</h2>
+    <g:if test="${user.branch}">
+        <div class="account-branches">
+            <g:each var="BranchID" in="${user.branch}">
+                <div class="leaf-container">
+                    <div class="leaf-title">${BranchID.branchTitle}</div>
+                    <g:link controller="branch" action="index" id="${BranchID.id}">
+                        <div class="leaf-image"><img onError="this.style.display='none';" src="${createLink(controller:'branch', action:'displayImage', params: ['id': BranchID.id])}"/></div>
+                    </g:link>
+                </div>
+            </g:each>
+        </div>
+    </g:if>
+    <g:else>
+        <h4 class="account-created-header-fail">You haven't created any branches. Get to it by clicking <g:link class="account-link" controller="branch" action="createBranch">here</g:link>!</h4>
+    </g:else>
+
+    <h2 class="account-created-header">Leaves</h2>
     <g:if test="${user.leaf}">
         <div class="account-leaves">
             <g:each var="leafID" in="${user.leaf}">
@@ -38,24 +48,10 @@
         </div>
     </g:if>
     <g:else>
-        <h4>No Leafs Created</h4>
+        <h4 class="account-created-header-fail">You haven't made a leaf yet. Find a cool branch and add a leaf to it!</h4>
     </g:else>
-    <h3 class="account-created-header">Branches</h3>
-    <g:if test="${user.branch}">
-        <div class="account-branches">
-        <g:each var="BranchID" in="${user.branch}">
-            <div class="leaf-container">
-                <div class="leaf-title">${BranchID.branchTitle}</div>
-                <g:link controller="branch" action="index" id="${BranchID.id}">
-                    <div class="leaf-image"><img onError="this.style.display='none'" src="${createLink(controller:'branch', action:'displayImage', params: ['id': BranchID.id])}"/></div>
-                </g:link>
-            </div>
-        </g:each>
-        </div>
-    </g:if>
-    <g:else>
-        <h4>No Branches Created</h4>
-    </g:else>
+
+    <g:link class="account-delete" action="deleteUser" id="${user.id}">Delete Account</g:link>
 
 </body>
 </html>

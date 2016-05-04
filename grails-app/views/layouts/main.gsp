@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><g:layoutTitle default="The Grove"/></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <asset:javascript src="jqcloud.min.js"/>
     <asset:stylesheet src="application.css"/>
-    <asset:javascript src="application.js"/>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:300,400' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -35,11 +37,27 @@
 
         <div class="header-account">
             <sec:ifLoggedIn>
-                <g:link action="account" controller="user"><sec:username/></g:link>
+                <div class="header-menu">
+                    <sec:username/>
+                    <div class="ul-triangle"></div>
+                    <ul>
+                        <li><g:link controller="user" action="account">Account Details</g:link></li>
+                        <sec:access expression="hasRole('ROLE_ADMIN')">
+                            <li>
+                                <g:link controller="user" action="userModeration">See Website Users</g:link>
+                            </li>
+                        </sec:access>
+                        <li>
+                            <form action='${request.contextPath}/logout' method='POST'>
+                                <g:submitButton name="Submit" value="Logout"/>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
                 <i class="fa fa-user fa-lg"></i>
             </sec:ifLoggedIn>
             <sec:ifNotLoggedIn>
-                <g:link action="user" controller="index">Account</g:link>
+                <g:link style="font-family: 'Roboto', sans-serif;font-weight: 100;"  action="user" controller="index">Login</g:link>
                 <i class="fa fa-user fa-lg"></i>
             </sec:ifNotLoggedIn>
         </div>
@@ -60,5 +78,6 @@
         <p> Created for MI 359: Application Development with Grails, at <a id="foot-link" href="http://msu.edu/" target="_blank">Michigan State University</a>.</p>
     </div>
 </footer>
+
 </body>
 </html>

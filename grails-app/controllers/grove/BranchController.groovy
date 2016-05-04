@@ -68,11 +68,11 @@ class BranchController {
                 parbranch.childbranchid.add(branch.id)
                 println"${parbranch.branchTitle} now has the following child branches with ID: ${parbranch.childbranchid}"
             }
-            redirect(action:"viewBranch", params: [id: branch.id])
+            redirect(action:"index", params: [id: branch.id])
 
         } else {
             println "Save failed"
-            render(view:"createBranch",model:[branch:branch])
+            redirect(controller:"branch", action:"createBranch")
         }
     }
 

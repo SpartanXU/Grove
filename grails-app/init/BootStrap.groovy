@@ -17,9 +17,6 @@ class BootStrap {
         UserRole.create user, userRole
 
 
-
-
-
         UserRole.withSession {
             it.flush()
             it.clear()
